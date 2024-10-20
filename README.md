@@ -49,7 +49,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 6️⃣ Create a Superuser (Optional)
+### 6️⃣ Create a Superuser 
 You can create a superuser to manage the database via Django's admin panel: 
 ```bash
 python manage.py createsuperuser
@@ -139,12 +139,12 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 6️⃣ Create a Superuser (Optional)
-You can create a superuser to manage the system via Django's admin panel:
+### 6️⃣ Create a Superuser 
+You can create a superuser to manage the database via Django's admin panel: 
 ```bash
 python manage.py createsuperuser
 ```
-- Follow the prompts to add a username and password of your choice.
+- Follow the prompts to add a username and password of your choice. To access the admin panel you can visit to http://127.0.0.1:8000/admin/ url and see database.
 
 ## 🌐 Real-Time Weather Monitoring
 

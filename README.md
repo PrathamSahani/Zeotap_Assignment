@@ -8,8 +8,6 @@ In this project, I've used Python and Django to create an awesome solution that 
 
 Both applications are designed to solve real-world problems with efficient and scalable approaches. Dive into each one for a detailed walkthrough! 👇
 
-Both applications are designed to solve real-world problems with efficient and scalable approaches. Dive into each one for a detailed walkthrough! 👇
-
 ## 🛠️ Application 1: Rule Engine with AST
 
 Welcome to **Application 1: Rule Engine with AST**! This project allows users to dynamically create, evaluate, and manage rules using a simple UI built with Django. Follow the steps below to set up and run the application successfully.
@@ -151,9 +149,17 @@ python manage.py createsuperuser
 ## 🌐 Real-Time Weather Monitoring
 
 - The system fetches real-time temperature data from **OpenWeatherAPI** every five minutes.
-- Summary data is updated dynamically whenever the page is refreshed.
+
+![1](https://github.com/user-attachments/assets/69d2a8c6-8c6b-4451-a405-633d84c15658)
+
+- Summary data is updated dynamically whenever the page is refreshed, click on the button **View All Summary** then we can see the summary of the cities temerature
+
+![2](https://github.com/user-attachments/assets/346834a9-9e89-455c-9f0b-65f4e1004462)
 
 ---
+- By clicking on the **Alerts** button we can know the Temperature is execced or not.
+
+![alerts](https://github.com/user-attachments/assets/f2c073a9-1c58-4a0b-a4f6-1f6417608d40)
 
 By following these steps, you can successfully set up and run the weather monitoring system with real-time data and efficient processing. 
 

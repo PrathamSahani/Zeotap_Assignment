@@ -1,7 +1,16 @@
 # Zeotap_Assignment
 In this project, I've used Python and Django to create an awesome solution that tackles the Zeotap challenge. 💻✨
 
-# 🛠️ Application 1: Rule Engine with AST
+## Applications
+
+- [**Application 1: Rule Engine with AST**](#application-1-rule-engine-with-ast)
+- [**Application 2: Real-Time Data Processing System for Weather Monitoring with Rollups and Aggregates**](#application-2-real-time-data-processing-system-for-weather-monitoring-with-rollups-and-aggregates)
+
+Both applications are designed to solve real-world problems with efficient and scalable approaches. Dive into each one for a detailed walkthrough! 👇
+
+Both applications are designed to solve real-world problems with efficient and scalable approaches. Dive into each one for a detailed walkthrough! 👇
+
+## 🛠️ Application 1: Rule Engine with AST
 
 Welcome to **Application 1: Rule Engine with AST**! This project allows users to dynamically create, evaluate, and manage rules using a simple UI built with Django. Follow the steps below to set up and run the application successfully.
 
@@ -91,4 +100,66 @@ If you face any issues during the setup, please refer to the project video tutor
 
 ---
 
-Feel free to explore and enhance the project further! 😊
+# 🌦️ Application 2: Real-Time Data Processing System for Weather Monitoring with Rollups and Aggregates
+
+Welcome to **Application 2: Real-Time Data Processing System for Weather Monitoring**! This project fetches real-time weather data, processes it, and provides rollups and aggregates for efficient monitoring. Follow the steps below to set up and run the project.
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone and Extract the Project
+- Download the folder from the GitHub repository.
+- Extract the folder into an empty directory of your choice.
+
+### 2️⃣ Set Up Your Virtual Environment
+To avoid dependency issues, it is recommended to create a virtual environment. Here's how:
+1. Open the extracted folder in **VS Code**.
+2. In the terminal, create the virtual environment:
+   ```bash
+   python -m venv env
+   ```
+3. Activate the virtual environment:
+   ```bash
+   .\env\Scripts\activate.ps1
+   ```
+
+### 3️⃣ Install Dependencies
+Once inside the virtual environment, install Django:
+```bash
+pip install django
+```
+
+### 4️⃣ Navigate to the Project Directory
+Change to the `weather_monitor` directory where the `manage.py` file is located:
+```bash
+cd weather_monitor
+```
+
+### 5️⃣ Migrate the Database
+Apply database migrations using the following commands:
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+### 6️⃣ Create a Superuser (Optional)
+You can create a superuser to manage the system via Django's admin panel:
+```bash
+python manage.py createsuperuser
+```
+- Follow the prompts to add a username and password of your choice.
+
+## 🌐 Real-Time Weather Monitoring
+
+- The system fetches real-time temperature data from **OpenWeatherAPI** every five minutes.
+- Summary data is updated dynamically whenever the page is refreshed.
+
+---
+
+By following these steps, you can successfully set up and run the weather monitoring system with real-time data and efficient processing. 
+
+## 📽️ Troubleshooting
+If you face any issues during the setup, please refer to the project video tutorial for further assistance.
+
+---
+
+Feel free to enhance the project and explore its capabilities! 😊

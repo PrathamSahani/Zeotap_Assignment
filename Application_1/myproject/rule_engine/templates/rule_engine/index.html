@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px -6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: rgb(14, 14, 59);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(19, 19, 90);
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .evaluation-result {
+            margin-top: 20px;
+            background-color: #f4f4f9;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Application 1 : Rule Engine with AST</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input type="text" name="rule_string" placeholder="Enter Rule String" required>
+            <button type="submit">Create Rule</button>
+        </form>
+
+        {% if rule_string %}
+            <div class="message success">
+                <strong>Rule :</strong> {{ rule_string }} <br>
+                <strong>Rule ID:</strong> {{ rule_id }}
+            </div>
+        {% endif %}
+
+        {% if error_message %}
+            <div class="message error">
+                Error: {{ error_message }}
+            </div>
+        {% endif %}
+
+        <h1>Evaluate a Rule</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input type="text" name="json_data" placeholder="Enter User Data JSON" required>
+            <input type="text" name="ast_id" placeholder="Enter Rule ID" required>
+            <button type="submit">Evaluate Rule</button>
+        </form>
+
+        {% if result is not None %}
+        <div class="evaluation-result">
+            <strong>Evaluation Result:</strong>
+                {{ result }}
+        </div>
+    {% endif %}
+    
+
+        <p><a href="{% url 'view_rules' %}">View All Rules</a></p>
+    </div>
+</body>
+</html>

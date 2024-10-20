@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta tag for responsiveness -->
+    <title>Weather Summary</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #34495e;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .city-list {
+            padding: 10px;
+            width: 220px;
+            float: left;
+            margin-right: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .city {
+            margin: 5px;
+            padding: 10px;
+            background-color: #e3f2fd;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .city:hover {
+            background-color: #bbdefb;
+        }
+
+        .city.active {
+            background-color: rgb(14, 14, 59);
+            color: white;
+        }
+
+        .drop-area {
+            padding: 20px;
+            width: 400px;
+            min-height: 300px;
+            float: left;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgb(14, 14, 59);
+            color: white;
+        }
+
+
+        .alert {
+            color: red;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            margin-left: 350px;
+        }
+        .a1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            margin-left: 400px;
+        }
+        .toggle-button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+
+        .show-summaries {
+            background-color: rgb(14, 14, 59);
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .show-alerts {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+
+        .hidden {
+            display: none;
+        }
+
+
+        @media (max-width: 768px) {
+
+            .city-list,
+            .drop-area {
+                width: 100%;
+                float: none;
+                margin-left: -200px;
+                margin-bottom: 20px;
+            }
+
+            .city-list {
+                background-color: #e0e0e0;
+            }
+
+            table {
+                font-size: 14px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            th,
+            td {
+                padding: 6px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            h2,
+            h3 {
+                font-size: 20px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .toggle-button {
+                font-size: 14px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        }
+
+        .b {
+            margin-left: 350px;
+        }
+    </style>
+    <script>
+
+        function fetchWeatherData(city, element) {
+            fetch(`/city-weather/?city=${city}`)
+                .then(response => response.json())
+                .then(data => {
+                    displayWeatherData(city, data);
+                    highlightActiveCity(element);
+                });
+        }
+
+        function displayWeatherData(city, data) {
+            const dropArea = document.getElementById("drop-area");
+            dropArea.innerHTML = `
+                <h2>Weather Report for ${city}</h2>
+                <p>Temperature: ${data.temp} °C</p>
+                <p>Feels Like: ${data.feels_like} °C</p>
+                <p>Condition: ${data.main_condition}</p>
+                <p>Timestamp: ${data.timestamp}</p>
+            `;
+        }
+
+        function highlightActiveCity(element) {
+
+            const cities = document.querySelectorAll('.city');
+            cities.forEach(city => city.classList.remove('active'));
+
+            element.classList.add('active');
+        }
+
+        function toggleSummaries() {
+            const summaryTable = document.getElementById("summary-table");
+            summaryTable.classList.toggle("hidden");
+        }
+
+        function toggleAlerts() {
+            const alertSection = document.getElementById("alert-section");
+            alertSection.classList.toggle("hidden");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Application 2 : Real-Time Data Processing System for
+        Weather Monitoring with Rollups and Aggregates</h1>
+
+    <div class="b">
+        <div class="city-list">
+            <h3>Select Metro City</h3>
+            {% for city in cities %}
+            <div class="city" id="city-{{ forloop.counter }}" onclick="fetchWeatherData('{{ city }}', this)">
+                {{ city }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="drop-area" id="drop-area">
+
+            <h3>Weather Report </h3>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="button-container">
+        <button class="toggle-button show-summaries" onclick="toggleSummaries()"> All Cities Summary</button>
+        <button class="toggle-button show-alerts" onclick="toggleAlerts()">Alerts</button>
+    </div>
+
+    <div id="alert-section" class="hidden">
+        {% if alert %}
+        <p class="alert">{{ alert }}</p>
+        {% else %}
+        <p class="a1">No alerts.</p>
+        {% endif %}
+    </div>
+
+    <div id="summary-table" class="hidden">
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Average Temperature (°C)</th>
+                <th>Max Temperature (°C)</th>
+                <th>Min Temperature (°C)</th>
+                <th>Dominant Condition</th>
+            </tr>
+            {% for summary in summaries %}
+            <tr>
+                <td>{{ summary.date }}</td>
+                <td>{{ summary.average_temp }}</td>
+                <td>{{ summary.max_temp }}</td>
+                <td>{{ summary.min_temp }}</td>
+                <td>{{ summary.dominant_condition }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+
+</body>
+
+</html>

@@ -2,6 +2,9 @@
 In this project, I've used Python and Django to create an awesome solution that tackles the Zeotap challenge. 💻✨
 Both applications are designed to solve real-world problems with efficient and scalable approaches. Dive into each one for a detailed walkthrough! 👇
 
+[Go to Application 1: Rule Engine with AST](#🛠️-application-1-rule-engine-with-ast)
+
+
 ## 🛠️ Application 1: Rule Engine with AST
 
 Welcome to **Application 1: Rule Engine with AST**! This project allows users to dynamically create, evaluate, and manage rules using a simple UI built with Django. Follow the steps below to set up and run the application successfully.

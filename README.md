@@ -2,9 +2,11 @@
 In this project, I've used Python and Django to create an awesome solution that tackles the Zeotap challenge. 💻✨
 Both applications are designed to solve real-world problems with efficient and scalable approaches. Dive into each one for a detailed walkthrough! 👇
 
-[Go to Application 1: Rule Engine with AST](#application-1-rule-engine-with-ast)
+# Applications
 
-[Go to Application 2: Real-Time Data Processing System for Weather Monitoring](#application-2-real-time-data-processing-system-for-weather-monitoring-with-rollups-and-aggregates)
+[Application 1:🛠️ Rule Engine with AST](#application-1-rule-engine-with-ast)
+
+[Application 2:🌦️ Real-Time Data Processing System for Weather Monitoring](#application-2-real-time-data-processing-system-for-weather-monitoring-with-rollups-and-aggregates)
 
 ## Application 1: Rule Engine with AST
 

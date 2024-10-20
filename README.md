@@ -18,7 +18,7 @@ Welcome to **Application 1: Rule Engine with AST**! This project allows users to
 - Download the folder from the GitHub repository.
 - Extract the folder into an empty directory of your choice.
 
-### 2️⃣ Set Up Your Virtual Environment
+### 2️⃣ Set Up Your Virtual Environment (Optional)
 To avoid dependency issues, it is recommended to create a virtual environment. Here's how:
 1. Open the extracted folder in **VS Code**.
 2. In the terminal, create the virtual environment:
@@ -108,7 +108,7 @@ Welcome to **Application 2: Real-Time Data Processing System for Weather Monitor
 - Download the folder from the GitHub repository.
 - Extract the folder into an empty directory of your choice.
 
-### 2️⃣ Set Up Your Virtual Environment
+### 2️⃣ Set Up Your Virtual Environment (Optional)
 To avoid dependency issues, it is recommended to create a virtual environment. Here's how:
 1. Open the extracted folder in **VS Code**.
 2. In the terminal, create the virtual environment:

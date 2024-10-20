@@ -3,11 +3,12 @@ In this project, I've used Python and Django to create an awesome solution that 
 
 ## Applications
 
-- [**Application 1: Rule Engine with AST**](#application-1-rule-engine-with-ast)
+- [**Application 1: Rule Engine with AST**](#First)
 - [**Application 2: Real-Time Data Processing System for Weather Monitoring with Rollups and Aggregates**](#application-2-real-time-data-processing-system-for-weather-monitoring-with-rollups-and-aggregates)
 
 Both applications are designed to solve real-world problems with efficient and scalable approaches. Dive into each one for a detailed walkthrough! 👇
 
+#First
 ## 🛠️ Application 1: Rule Engine with AST
 
 Welcome to **Application 1: Rule Engine with AST**! This project allows users to dynamically create, evaluate, and manage rules using a simple UI built with Django. Follow the steps below to set up and run the application successfully.

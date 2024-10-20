@@ -4,6 +4,7 @@ Both applications are designed to solve real-world problems with efficient and s
 
 [Go to Application 1: Rule Engine with AST](#🛠️-application-1-rule-engine-with-ast)
 
+[Go to Application 2: Real-Time Data Processing System for Weather Monitoring](#🌦️-application-2-real-time-data-processing-system-for-weather-monitoring-with-rollups-and-aggregates)
 
 ## 🛠️ Application 1: Rule Engine with AST
 
@@ -95,7 +96,7 @@ If you face any issues during the setup, please refer to the project video tutor
 
 ---
 
-# 🌦️ Application 2: Real-Time Data Processing System for Weather Monitoring with Rollups and Aggregates
+## 🌦️ Application 2: Real-Time Data Processing System for Weather Monitoring with Rollups and Aggregates
 
 Welcome to **Application 2: Real-Time Data Processing System for Weather Monitoring**! This project fetches real-time weather data, processes it, and provides rollups and aggregates for efficient monitoring. Follow the steps below to set up and run the project.
 

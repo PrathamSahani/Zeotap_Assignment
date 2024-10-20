@@ -1,14 +1,7 @@
 # Zeotap_Assignment
 In this project, I've used Python and Django to create an awesome solution that tackles the Zeotap challenge. 💻✨
-
-## Applications
-
-- [**Application 1: Rule Engine with AST**](#First)
-- [**Application 2: Real-Time Data Processing System for Weather Monitoring with Rollups and Aggregates**](#application-2-real-time-data-processing-system-for-weather-monitoring-with-rollups-and-aggregates)
-
 Both applications are designed to solve real-world problems with efficient and scalable approaches. Dive into each one for a detailed walkthrough! 👇
 
-#First
 ## 🛠️ Application 1: Rule Engine with AST
 
 Welcome to **Application 1: Rule Engine with AST**! This project allows users to dynamically create, evaluate, and manage rules using a simple UI built with Django. Follow the steps below to set up and run the application successfully.
@@ -55,7 +48,7 @@ You can create a superuser to manage the database via Django's admin panel:
 ```bash
 python manage.py createsuperuser
 ```
-- Follow the prompts to add a username and password of your choice. To access the admin panel you can visit to http://127.0.0.1:8000/ url and see database.
+- Follow the prompts to add a username and password of your choice. To access the admin panel you can visit to http://127.0.0.1:8000/admin/ url and see database.
 
 ### 7️⃣ Start the Server
 Finally, start the Django development server:
@@ -149,11 +142,11 @@ python manage.py createsuperuser
 
 ## 🌐 Real-Time Weather Monitoring
 
-- The system fetches real-time temperature data from **OpenWeatherAPI** every five minutes.
+- The system retrieves real-time temperature data from **OpenWeatherAPI** every five minutes. To obtain the temperature of any metro city, simply click the corresponding city button, and the weather report will be displayed automatically.
 
 ![1](https://github.com/user-attachments/assets/69d2a8c6-8c6b-4451-a405-633d84c15658)
 
-- Summary data is updated dynamically whenever the page is refreshed, click on the button **View All Summary** then we can see the summary of the cities temerature
+-The summary data is updated dynamically each time the page is refreshed. By clicking the View All Summary button, you can view a summary of the temperatures for the various cities displayed below.
 
 ![2](https://github.com/user-attachments/assets/346834a9-9e89-455c-9f0b-65f4e1004462)
 

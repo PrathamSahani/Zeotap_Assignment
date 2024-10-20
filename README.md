@@ -2,11 +2,11 @@
 In this project, I've used Python and Django to create an awesome solution that tackles the Zeotap challenge. 💻✨
 Both applications are designed to solve real-world problems with efficient and scalable approaches. Dive into each one for a detailed walkthrough! 👇
 
-[Go to Application 1: Rule Engine with AST](#🛠️-application-1-rule-engine-with-ast)
+[Go to Application 1: Rule Engine with AST](#application-1-rule-engine-with-ast)
 
-[Go to Application 2: Real-Time Data Processing System for Weather Monitoring](#🌦️-application-2-real-time-data-processing-system-for-weather-monitoring-with-rollups-and-aggregates)
+[Go to Application 2: Real-Time Data Processing System for Weather Monitoring](#application-2-real-time-data-processing-system-for-weather-monitoring-with-rollups-and-aggregates)
 
-## 🛠️ Application 1: Rule Engine with AST
+## Application 1: Rule Engine with AST
 
 Welcome to **Application 1: Rule Engine with AST**! This project allows users to dynamically create, evaluate, and manage rules using a simple UI built with Django. Follow the steps below to set up and run the application successfully.
 
@@ -96,7 +96,7 @@ If you face any issues during the setup, please refer to the project video tutor
 
 ---
 
-## 🌦️ Application 2: Real-Time Data Processing System for Weather Monitoring with Rollups and Aggregates
+## Application 2: Real-Time Data Processing System for Weather Monitoring with Rollups and Aggregates
 
 Welcome to **Application 2: Real-Time Data Processing System for Weather Monitoring**! This project fetches real-time weather data, processes it, and provides rollups and aggregates for efficient monitoring. Follow the steps below to set up and run the project.
 

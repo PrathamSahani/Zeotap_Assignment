@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from .models import DailyWeatherSummary
 
-API_KEY = "2e3ca0fab992fb67a0d0b320d23e6e71"
+API_KEY = "a2808a876a2ac313ab5b022f6c7d4285"
 METRO_CITIES = ["Delhi", "Mumbai", "Chennai", "Bangalore", "Kolkata", "Hyderabad"]
 
 def fetch_weather_data(city):
